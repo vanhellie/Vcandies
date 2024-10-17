@@ -1,0 +1,205 @@
+button {
+    background-color: #98c0f3;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    cursor: pointer;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+}
+
+button:hover {
+    background-color: #f9c3c3;
+}
+
+.cart-item, .product-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.product-item h2, .cart-item h2 {
+    margin-bottom: 10px;
+}
+
+
+.products {
+    display: flex;
+    justify-content: center;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+
+    font-style: normal;
+}
+
+input {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: #7a003e;
+    background-color: rgb(220, 243, 248);
+}
+
+
+
+.product-item {
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease; 
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.general-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.final-products {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease; 
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.cart-header {
+    margin-left: 210px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.cart-p {
+    margin-left: 220px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+p {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.pic {
+    width: 50vh;
+    height: 50vh;
+}
+
+
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .cart-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .pic {
+        width: 30vh;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-details {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    h2 {
+        font-size: 20px; 
+    }
+
+    button {
+        padding: 10px; 
+        font-size: 16px;
+    }
+
+    .pic {
+        width: 25vh;
+        height: 25vh; 
+    }
+}

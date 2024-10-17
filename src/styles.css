@@ -1,0 +1,37 @@
+body {
+    background-image: url('https://img.freepik.com/free-vector/pastel-pink-soft-gradient-blur-background-vector_53876-174848.jpg?t=st=1728915125~exp=1728918725~hmac=de7f24f96258e9be11befe5a702953e5da43dc59f8eebf8d7653d842b72ac490&w=740');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: repeat;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
