@@ -6,7 +6,7 @@ import './Home.css';
 const Header = () => {
     return (
         <header className="header">
-            <h2>Welcome to Vanhellie Candies!</h2>
+            <h1>Welcome to Vanhellie Candies!</h1>
             <p>Interesting treats are waiting for you</p>
         </header>
     );
@@ -40,7 +40,7 @@ function Home() {
                             controls={false}
                         />
                         <div className="modal-overlay">
-                            <h1>Candy Corner</h1>
+                            <h2>Candy Corner</h2>
                             <p>Delicious and sweet treats for everyone.</p>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ function Home() {
                             controls={false}
                         />
                         <div className="modal-overlay">
-                            <h1>Spicy Corner</h1>
+                            <h2>Spicy Corner</h2>
                             <p>Spice up your life with our hot selections.</p>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ function Home() {
                             controls={false}
                         />
                         <div className="modal-overlay">
-                            <h1>Mystery Boxes</h1>
+                            <h2>Mystery Boxes</h2>
                             <p>Exciting surprises waiting inside!</p>
                         </div>
                     </div>

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
 import './Products.css';
 
-function Products({ addToCart }) {  
+function Products() {
     const [searchTerm, setSearchTerm] = useState('');
     const products = useSelector((state) => state.products);
     const [quantities, setQuantities] = useState({});
+    const dispatch = useDispatch();
 
     const handleQuantityChange = (id, value) => {
         setQuantities((prevQuantities) => ({
@@ -17,6 +19,10 @@ function Products({ addToCart }) {
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const handleAddToCart = (product) => {
+        dispatch(addToCart({ ...product, quantity: quantities[product.id] || 1 }));
+    };
 
     return (
         <div>
@@ -46,7 +52,7 @@ function Products({ addToCart }) {
                             value={quantities[product.id] || 1}
                             onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
                         />
-                        <button onClick={() => addToCart(product, quantities[product.id] || 1)}>Add to cart</button>
+                        <button onClick={() => handleAddToCart(product)}>Add to cart</button>
                     </div>
                 ))}
             </div>
