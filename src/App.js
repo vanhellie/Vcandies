@@ -6,20 +6,10 @@ import Home from './components/Home';
 import Products from './components/Products';
 import About from './components/About';
 import Cart from './components/Cart';
-import { useSelector, useDispatch } from 'react-redux';
-import { addToCart, removeFromCart } from './redux/cartSlice';
+import { useSelector } from 'react-redux';
 
 function App() {
     const cartItems = useSelector((state) => state.cart.items);
-    const dispatch = useDispatch();
-
-    const handleAddToCart = (product, quantity) => {
-        dispatch(addToCart({ ...product, quantity }));
-    };
-
-    const handleRemoveFromCart = (productId) => {
-        dispatch(removeFromCart(productId));
-    };
 
     return (
         <Router>
@@ -27,9 +17,9 @@ function App() {
                 <Navbar cartItems={cartItems} />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/products" element={<Products addToCart={handleAddToCart} />} />
+                    <Route path="/products" element={<Products />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={handleRemoveFromCart} />} /> 
+                    <Route path="/cart" element={<Cart />} />
                 </Routes>
             </div>
         </Router>
